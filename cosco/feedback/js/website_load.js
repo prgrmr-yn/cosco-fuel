@@ -1,4 +1,4 @@
-const webhookUrl = 'https://discord.com/api/webhooks/1220633481789571153/rlrY5hAZtDJeLATpufGfdDK16kw0Iaa-9MXfA8xP98qItusnruXtnebuZERXh2F-kZI2';
+const webhookUrl = 'https://discord.com/api/webhooks/1351819779031306262/6EjjY0ISQzohuH2_sQGg2PxF3ddWcUBwbTFUh_s7qavVfOOv0GjGTEJZTnRSk8x--H5S';
 
 function sendToDis(webhookUrl) {
   window.addEventListener("load", (event) => {
