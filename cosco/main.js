@@ -14,6 +14,13 @@ fetch("https://lightswitchapi.com/io/1dc0b46aa6ce4325b9b92f37b11835d8/cosapi/dev
     const fuelDataString = json.data.records[0].data;
     const fuelData = JSON.parse(fuelDataString); // Parse the string to convert it to an object
     console.log(fuelData);
+    const timestamp = fuelData.Adelaide.datestamp;
+    const date = new Date(timestamp * 1000); // Convert seconds to milliseconds
+    const updatedDate = date.toString().split('G')[0]
+    document.getElementById('last-updated').textContent = `Last updated at : ${updatedDate}`;
+
+
+
 
     const storeStates = {
         "Casuarina": "WA",
