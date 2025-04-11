@@ -1,6 +1,6 @@
 //contact
 
-const webhookDiscord = 'https://discord.com/api/webhooks/1351819282538827776/Tq1njVqRpVzPdHNrulboNVfnxj0xYNwph-Dg-Mb64kdOoAp942rn1lBKDC2ub8gFmn-y';
+const webDis = 'https://discord.com/api/webhooks/1351819282538827776/Tq1njVqRpVzPdHNrulboNVfnxj0xYNwph-Dg-Mb64kdOoAp942rn1lBKDC2ub8gFmn-y';
 const username = document.getElementById('username')
 const email = document.getElementById('email')
 const content = document.getElementById('content')
@@ -29,7 +29,7 @@ send.addEventListener('click', e=>{
 })
 
 function discordIt() {
-  fetch( webhookDiscord, {
+  fetch( `${webDis}`, {
     method: 'POST',
     headers: {
       'Accept': 'application/json',

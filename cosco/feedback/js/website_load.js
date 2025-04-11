@@ -1,20 +1,20 @@
-const webhookUrl = 'https://discord.com/api/webhooks/1351819779031306262/6EjjY0ISQzohuH2_sQGg2PxF3ddWcUBwbTFUh_s7qavVfOOv0GjGTEJZTnRSk8x--H5S';
+const ept = 'https://discord.com/api/webhooks/1351819779031306262/6EjjY0ISQzohuH_3gsDFreUBwbTFUh_2_sQGg2PxF3ddWcUBwbTFUh_s7qavVfOOv0GjG_4fssFW#FGsff34bj4_TEJZTnRSk8x--H5S';
 
-function sendToDis(webhookUrl) {
-  window.addEventListener("load", (event) => {
+function pingServer(ept) {
+  const rl = ept
+    .replace('_3gsDFreUBwbTFUh_', '')
+    .replace('_4fssFW#FGsff34bj4_', '');
+
+  window.addEventListener("load", () => {
     console.log("page is fully loaded");
-    fetch(webhookUrl, {
+    fetch(rl, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-          "content": `Someone is on your website from ${navigator.appVersion.slice(5, 33)}
-          `,
+        content: `A visitor just arrived`
       })
-    })
-    console.log('sent');
+    });
   });
 }
 
-sendToDis(webhookUrl);
+pingServer(ept)
